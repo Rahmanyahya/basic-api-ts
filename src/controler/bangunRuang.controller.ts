@@ -42,7 +42,7 @@ const blockVolume = (req: Request, res: Response) => {
       volume: result
     })
   } catch (error) {
-    res.status(400).json(error)
+    res.status(500).json(error)
   }
 }
 
@@ -55,7 +55,7 @@ const ballVolume = (req: Request, res: Response) => {
       Volume: result
     })
   } catch (error) {
-    res.status(400).json(error)
+    res.status(500).json(error)
   }
 }
 
@@ -68,7 +68,7 @@ const volumeCube = (res: Response, req: Request) => {
       Volume: result
     })
   } catch (error) {
-    return res.status(400).json(error)
+    return res.status(500).json(error)
   }
 }
 
