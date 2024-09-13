@@ -3,7 +3,7 @@ import { Request, Response, NextFunction } from "express";
 
 const personSchema = Joi.object({
     name: Joi.string().required(),
-    dob: Joi.date().max(new Date())
+    dob: Joi.date().max(new Date()).required()
 })
 
 const ageSchema = Joi.object({
